@@ -24,7 +24,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCell", for: indexPath) as! PostCollectionViewCell
         
         
-//        hi im here
         // Configure the cell...
         let post = self.posts[indexPath.row] as! [String: AnyObject]
 //        cell.usernameLabel.text = post["username"] as? String
@@ -50,6 +49,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                     
                 } else {
                     // error
+                    print("not downloaded")
                     print("Error downloading image: \(String(describing: error?.localizedDescription))")
                     cell.backgroundColor = UIColor.blue
                     cell.postImageView.isHidden = true
@@ -80,6 +80,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.CollectionView.reloadData()
 }
 
-
-
+    
+    @IBAction func refreshFeed(_ sender: Any) {
+        loadPosts()
+    }
+    
 }

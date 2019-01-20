@@ -22,6 +22,11 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Feed" id="Ue2-sh-dcu">
+                                        <barButtonItem key="leftBarButtonItem" title="Refresh" id="KLp-9p-fUc">
+                                            <connections>
+                                                <action selector="refreshFeed:" destination="BYZ-38-t0r" id="uKU-O0-xbu"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="RMs-4f-fEb">
                                             <connections>
                                                 <segue destination="mc8-MA-ycE" kind="presentation" id="wMy-iy-pl7"/>
