@@ -23,6 +23,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCell", for: indexPath) as! PostCollectionViewCell
         
+        
+//        hi im here
         // Configure the cell...
         let post = self.posts[indexPath.row] as! [String: AnyObject]
 //        cell.usernameLabel.text = post["username"] as? String
