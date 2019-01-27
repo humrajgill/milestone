@@ -15,6 +15,10 @@
 		8449CCBF21A5D77500ACB9B5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449CCBE21A5D77500ACB9B5 /* Post.swift */; };
 		8449CCC821A5F39000ACB9B5 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449CCC721A5F39000ACB9B5 /* PostViewController.swift */; };
 		8449CCCA21A5F97300ACB9B5 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449CCC921A5F97300ACB9B5 /* PostCollectionViewCell.swift */; };
+		8480812C21FD3A5B00EA9962 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480812B21FD3A5B00EA9962 /* LoginViewController.swift */; };
+		8480813521FD3F4500EA9962 /* SirinStencil.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8480813321FD3F4500EA9962 /* SirinStencil.ttf */; };
+		8480813621FD3F4500EA9962 /* LilyScriptOne.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8480813421FD3F4500EA9962 /* LilyScriptOne.ttf */; };
+		8480813821FD439F00EA9962 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480813721FD439F00EA9962 /* RegisterViewController.swift */; };
 		848668D021A6A38500842389 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 848668CF21A6A38500842389 /* GoogleService-Info.plist */; };
 		A9B393FC39130CC02D3C78DE /* Pods_prototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA00DFE954CFCC942854850 /* Pods_prototype.framework */; };
 /* End PBXBuildFile section */
@@ -31,6 +35,10 @@
 		8449CCBE21A5D77500ACB9B5 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		8449CCC721A5F39000ACB9B5 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		8449CCC921A5F97300ACB9B5 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
+		8480812B21FD3A5B00EA9962 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8480813321FD3F4500EA9962 /* SirinStencil.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SirinStencil.ttf; sourceTree = "<group>"; };
+		8480813421FD3F4500EA9962 /* LilyScriptOne.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LilyScriptOne.ttf; sourceTree = "<group>"; };
+		8480813721FD439F00EA9962 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		848668CF21A6A38500842389 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A27B040A5CFC6877E3D3F748 /* Pods-prototype.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prototype.release.xcconfig"; path = "Pods/Target Support Files/Pods-prototype/Pods-prototype.release.xcconfig"; sourceTree = "<group>"; };
 		FEBBE29E7F88DAB8CF58F0C6 /* Pods-prototype.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prototype.debug.xcconfig"; path = "Pods/Target Support Files/Pods-prototype/Pods-prototype.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,12 +77,15 @@
 		8428894E21A52DF0000D06D3 /* prototype */ = {
 			isa = PBXGroup;
 			children = (
+				8480813221FD3F3A00EA9962 /* Fonts */,
 				8449CCBD21A5D76800ACB9B5 /* Model */,
 				8428894F21A52DF0000D06D3 /* AppDelegate.swift */,
 				8428895121A52DF0000D06D3 /* ViewController.swift */,
 				8449CCC721A5F39000ACB9B5 /* PostViewController.swift */,
 				8449CCC921A5F97300ACB9B5 /* PostCollectionViewCell.swift */,
 				8428895321A52DF0000D06D3 /* Main.storyboard */,
+				8480812B21FD3A5B00EA9962 /* LoginViewController.swift */,
+				8480813721FD439F00EA9962 /* RegisterViewController.swift */,
 				8428895621A52DF1000D06D3 /* Assets.xcassets */,
 				8428895821A52DF1000D06D3 /* LaunchScreen.storyboard */,
 				8428895B21A52DF1000D06D3 /* Info.plist */,
@@ -89,6 +100,15 @@
 				8449CCBE21A5D77500ACB9B5 /* Post.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8480813221FD3F3A00EA9962 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8480813421FD3F4500EA9962 /* LilyScriptOne.ttf */,
+				8480813321FD3F4500EA9962 /* SirinStencil.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		9760265F8D3EFCEDBAB916A4 /* Frameworks */ = {
@@ -172,6 +192,8 @@
 				848668D021A6A38500842389 /* GoogleService-Info.plist in Resources */,
 				8428895721A52DF1000D06D3 /* Assets.xcassets in Resources */,
 				8428895521A52DF0000D06D3 /* Main.storyboard in Resources */,
+				8480813621FD3F4500EA9962 /* LilyScriptOne.ttf in Resources */,
+				8480813521FD3F4500EA9962 /* SirinStencil.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +257,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8480812C21FD3A5B00EA9962 /* LoginViewController.swift in Sources */,
 				8449CCCA21A5F97300ACB9B5 /* PostCollectionViewCell.swift in Sources */,
+				8480813821FD439F00EA9962 /* RegisterViewController.swift in Sources */,
 				8449CCC821A5F39000ACB9B5 /* PostViewController.swift in Sources */,
 				8428895221A52DF0000D06D3 /* ViewController.swift in Sources */,
 				8449CCBF21A5D77500ACB9B5 /* Post.swift in Sources */,

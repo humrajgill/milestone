@@ -17,7 +17,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var posts = NSMutableArray()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.posts.count
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -25,39 +25,38 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         
         // Configure the cell...
-        let post = self.posts[indexPath.row] as! [String: AnyObject]
+         let post = self.posts[indexPath.row] as! [String: AnyObject]
 //        cell.usernameLabel.text = post["username"] as? String
 //        cell.titleTextView.text = post["caption"] as? String
         
+        cell.backgroundColor = UIColor.yellow
         
         if let imageName = post["image"] as? String { // find image
             
+            cell.backgroundColor = UIColor.red
             // check server storage
-            let imageRef = Storage.storage().reference().child("images/\(imageName)")
-            imageRef.getData(maxSize: 25 * 1024 * 1024) { (data, error) in          // download image
-                if error == nil {
-                    // successful
-                    let image = UIImage(data: data!)
-                    cell.postImageView.image = image
+//            let imageRef = Storage.storage().reference().child("images/\(imageName)")
+//            imageRef.getData(maxSize: 25 * 1024 * 1024) { (data, error) in          // download image
+//                if error == nil {
+//                     successful
+//                    let image = UIImage(data: data!)
+//                    cell.postImageView.image = image
+        
                     
-                    
-                    UIView.animate(withDuration: 0.4, animations: {     // animation when image is downloaded
+//                    UIView.animate(withDuration: 0.4, animations: {     // animation when image is downloaded
 //                        cell.titleTextView.alpha = 1
 //                        cell.usernameLabel.alpha = 1
-                        cell.postImageView.alpha = 1
-                    })
-                    
+//                        cell.postImageView.alpha = 1
+//                    })
+            
                 } else {
                     // error
-                    print("not downloaded")
-                    print("Error downloading image: \(String(describing: error?.localizedDescription))")
+                    print("error")
+//                    print("Error downloading image: \(String(describing: error?.localizedDescription))")
                     cell.backgroundColor = UIColor.blue
-                    cell.postImageView.isHidden = true
-                }
             }
-        }
         return cell
-    }
+        }
     
     
     override func viewDidLoad() {
