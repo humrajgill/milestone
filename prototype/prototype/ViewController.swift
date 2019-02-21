@@ -26,10 +26,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         // Configure the cell...
 <<<<<<< HEAD
+<<<<<<< HEAD
          let post = self.posts[indexPath.row] as! [String: AnyObject]
 //         cell.usernameLabel.text = post["username"] as? String
 //         cell.titleTextView.text = post["caption"] as? String
 =======
+=======
+>>>>>>> parent of 4c52db8... Added Login & Register
         let post = self.posts[indexPath.row] as! [String: AnyObject]
 //        cell.usernameLabel.text = post["username"] as? String
 //        cell.titleTextView.text = post["caption"] as? String
@@ -42,6 +45,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let imageRef = Storage.storage().reference().child("images/\(imageName)")
             imageRef.getData(maxSize: 25 * 1024 * 1024) { (data, error) in          // download image
                 if error == nil {
+<<<<<<< HEAD
 <<<<<<< HEAD
                      // successful
                     let image = UIImage(data: data!)
@@ -75,6 +79,21 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                     
                 } else {
                     // error
+=======
+                    // successful
+                    let image = UIImage(data: data!)
+                    cell.postImageView.image = image
+                    
+                    
+                    UIView.animate(withDuration: 0.4, animations: {     // animation when image is downloaded
+//                        cell.titleTextView.alpha = 1
+//                        cell.usernameLabel.alpha = 1
+                        cell.postImageView.alpha = 1
+                    })
+                    
+                } else {
+                    // error
+>>>>>>> parent of 4c52db8... Added Login & Register
                     print("not downloaded")
                     print("Error downloading image: \(String(describing: error?.localizedDescription))")
                     cell.backgroundColor = UIColor.blue

@@ -134,10 +134,13 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoE-St-fDe">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <rect key="frame" x="109" y="361" width="157" height="40"/>
                                 <fontDescription key="fontDescription" name="SirinStencil-Regular" family="SirinStencil" pointSize="19"/>
                                 <state key="normal" title="CHOOSE AN IMAGE...">
 =======
+=======
+>>>>>>> parent of 4c52db8... Added Login & Register
                                 <rect key="frame" x="121" y="281" width="133" height="30"/>
                                 <state key="normal" title="Choose an image...">
 >>>>>>> parent of 4c52db8... Added Login & Register
@@ -175,6 +178,7 @@
             </objects>
             <point key="canvasLocation" x="733.60000000000002" y="43.596059113300491"/>
         </scene>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <!--Login View Controller-->
         <scene sceneID="hPw-sd-T8Q">
@@ -380,6 +384,8 @@
             </objects>
             <point key="canvasLocation" x="-642.39999999999998" y="743.3497536945813"/>
         </scene>
+=======
+>>>>>>> parent of 4c52db8... Added Login & Register
 =======
 >>>>>>> parent of 4c52db8... Added Login & Register
     </scenes>
