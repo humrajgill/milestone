@@ -14,7 +14,7 @@ import FirebaseAuth
 
 class PostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-//    @IBOutlet weak var TitleTextField: UITextField!  // caption text
+//    @IBOutlet weak var TitleTextField: UITextField!
 //    @IBOutlet weak var DescriptionTextField: UITextView!
     @IBOutlet weak var SelectedImageView: UIImageView!
     @IBOutlet weak var SelectImageButton: UIButton!
@@ -87,16 +87,16 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     // Posting Fuctionality
     @IBAction func PostTapped(_ sender: Any) {
         
-//        if (imageFileName != "") {
+        if (imageFileName != "") {
             // image has finished uploading, save post
         
-            let uid = Auth.auth().currentUser?.uid
+//            let uid = Auth.auth().currentUser?.uid
             
-            Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value) { (snapshot) in
-                if let userDictionary = snapshot.value as? [String: AnyObject] {
+//            Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value) { (snapshot) in
+//                if let userDictionary = snapshot.value as? [String: AnyObject] {
             
-                    for user in userDictionary {
-                        if let username = user.value as? String {
+//                    for user in userDictionary {
+//                        if let username = user.value as? String {
             
 //                                    let caption = TitleTextField.text
             
@@ -110,10 +110,10 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                     
                                     
                                     let postObject: Dictionary<String, Any> = [
-                                        "uid" : uid!,
-                                        "username" : username,
+//                                        "uid" : uid!,
+//                                        "username" : username,
 //                                        "caption" : caption!,
-                                        "image" : self.imageFileName,
+                                        "image" : imageFileName
                                     ]
                                     Database.database().reference().child("posts").childByAutoId().setValue(postObject)
                                     
@@ -122,24 +122,19 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                             
                                     let alert = UIAlertController(title: "Success", message: "You have shared your post!", preferredStyle: .alert)
                             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                                
                                 // will run when OK is pressed on pop up alert
                                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainVC")
                                 self.present(vc!, animated: false, completion: nil)
                             }))
                             self.present(alert, animated: true, completion: nil)
-                        }
-                    }
-                }
-            }
-//        } else {
-//            // image has not finished uploading, give alert
-//            let alert = UIAlertController(title: "Still Uploading...", message: "Your image has not finished uploading...", preferredStyle: .alert)
-//            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//            self.present(alert, animated: true, completion: nil)
-//        }
+            
+        } else {
+            // image has not finished uploading, give alert
+            let alert = UIAlertController(title: "Still Uploading...", message: "Your image has not finished uploading...", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
-        
     @IBAction func dismiss_onClick(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
