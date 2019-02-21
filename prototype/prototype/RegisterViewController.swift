@@ -35,21 +35,24 @@ class RegisterViewController: UIViewController {
         let username = UsernameTextField.text
         let email = EmailTextField.text
         let password = PasswordTextField.text
-        
+
         Auth.auth().createUser(withEmail: email!, password: password!) { (user, error) in
             if error != nil {
+                
                 // error creating account
                 let alert = UIAlertController(title: "Error", message: "Something went wrong. " + (error?.localizedDescription)!, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
+           
             } else {
-                // success
+                 // success
                 
-                /*
                  // Successful Registration
                  let alert = UIAlertController(title: "Success", message: "You are now registered!", preferredStyle: .alert)
-                 self.present(alert, animated: true, completion: nil)
-                 */
+                 self.present(alert, animated: true, completion:{
+                    Timer.scheduledTimer(withTimeInterval: 3, repeats:false, block: {_ in
+                        self.dismiss(animated: true, completion: nil)
+                    })
                 
                 //Saving username to database
                 if let uid = Auth.auth().currentUser?.uid {
@@ -63,7 +66,8 @@ class RegisterViewController: UIViewController {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainVC")
                 self.present(vc!, animated: true, completion: nil)
                 
-            }
+            })
+        }
         }
     }
     

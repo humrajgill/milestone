@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rom-3O-X7t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,14 +9,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="LilyScriptOne.ttf">
-            <string>LilyScriptOne-Regular</string>
-        </array>
-        <array key="SirinStencil.ttf">
-            <string>SirinStencil-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -122,27 +114,33 @@
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jZ5-jg-pAz">
-                                <rect key="frame" x="37.666666666666657" y="231" width="300" height="300"/>
+                                <rect key="frame" x="67.666666666666686" y="176" width="240" height="240"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="0a3-1S-aAR"/>
-                                    <constraint firstAttribute="width" constant="300" id="A2q-RJ-HqU"/>
+                                    <constraint firstAttribute="height" constant="240" id="0a3-1S-aAR"/>
+                                    <constraint firstAttribute="width" constant="240" id="A2q-RJ-HqU"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wb2-EN-zDw">
-                                <rect key="frame" x="164.66666666666666" y="539" width="46" height="43"/>
+                                <rect key="frame" x="145.66666666666666" y="466" width="84" height="52"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="YpT-80-lOA"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="ldg-HG-7bi"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="84" id="AoI-33-Pox"/>
+                                    <constraint firstAttribute="height" constant="52" id="MwE-H6-73S"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SirinStencil-Regular" family="SirinStencil" pointSize="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <state key="normal" title="POST"/>
                                 <connections>
                                     <action selector="PostTapped:" destination="mc8-MA-ycE" eventType="touchUpInside" id="aO7-kq-Juf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoE-St-fDe">
-                                <rect key="frame" x="121.66666666666669" y="366" width="132" height="30"/>
+<<<<<<< HEAD
+                                <rect key="frame" x="109" y="361" width="157" height="40"/>
+                                <fontDescription key="fontDescription" name="SirinStencil-Regular" family="SirinStencil" pointSize="19"/>
+                                <state key="normal" title="CHOOSE AN IMAGE...">
+=======
+                                <rect key="frame" x="121" y="281" width="133" height="30"/>
                                 <state key="normal" title="Choose an image...">
+>>>>>>> parent of 4c52db8... Added Login & Register
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
@@ -152,18 +150,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="FoE-St-fDe" firstAttribute="centerX" secondItem="jZ5-jg-pAz" secondAttribute="centerX" id="44x-eE-XTS"/>
-                            <constraint firstItem="jZ5-jg-pAz" firstAttribute="top" secondItem="i6Y-u7-R1X" secondAttribute="bottom" constant="143" id="7aV-LH-gR9"/>
-                            <constraint firstItem="Wb2-EN-zDw" firstAttribute="centerX" secondItem="yji-R4-2em" secondAttribute="centerX" id="GdT-QB-72T"/>
+                            <constraint firstItem="jZ5-jg-pAz" firstAttribute="top" secondItem="i6Y-u7-R1X" secondAttribute="bottom" constant="88" id="0Et-fG-qMi"/>
+                            <constraint firstItem="Wb2-EN-zDw" firstAttribute="centerX" secondItem="yji-R4-2em" secondAttribute="centerX" id="0Xq-th-3Qt"/>
+                            <constraint firstItem="FoE-St-fDe" firstAttribute="centerX" secondItem="i6Y-u7-R1X" secondAttribute="centerX" id="8s9-02-fKp"/>
+                            <constraint firstItem="FoE-St-fDe" firstAttribute="centerY" secondItem="jZ5-jg-pAz" secondAttribute="centerY" id="DwO-RH-ISq"/>
+                            <constraint firstItem="Wb2-EN-zDw" firstAttribute="top" secondItem="jZ5-jg-pAz" secondAttribute="bottom" constant="50" id="FRw-li-Kbd"/>
                             <constraint firstItem="i6Y-u7-R1X" firstAttribute="leading" secondItem="nK6-TD-FAf" secondAttribute="leading" id="JgW-bl-DY5"/>
-                            <constraint firstItem="Wb2-EN-zDw" firstAttribute="top" secondItem="jZ5-jg-pAz" secondAttribute="bottom" constant="8" id="Jnl-3n-058"/>
                             <constraint firstItem="i6Y-u7-R1X" firstAttribute="top" secondItem="nK6-TD-FAf" secondAttribute="top" id="LxV-tC-nhZ"/>
-                            <constraint firstItem="FoE-St-fDe" firstAttribute="centerY" secondItem="jZ5-jg-pAz" secondAttribute="centerY" id="Sey-dG-M1b"/>
                             <constraint firstItem="i6Y-u7-R1X" firstAttribute="leading" secondItem="yji-R4-2em" secondAttribute="leading" id="TX4-ZS-SJ1"/>
                             <constraint firstItem="i6Y-u7-R1X" firstAttribute="top" secondItem="nK6-TD-FAf" secondAttribute="top" id="XI1-OI-PPt"/>
                             <constraint firstItem="i6Y-u7-R1X" firstAttribute="trailing" secondItem="nK6-TD-FAf" secondAttribute="trailing" id="ZlB-qu-BPz"/>
                             <constraint firstItem="i6Y-u7-R1X" firstAttribute="centerX" secondItem="jZ5-jg-pAz" secondAttribute="centerX" id="ayn-DH-YsN"/>
-                            <constraint firstItem="jZ5-jg-pAz" firstAttribute="centerX" secondItem="yji-R4-2em" secondAttribute="centerX" id="dtM-he-byh"/>
+                            <constraint firstItem="FoE-St-fDe" firstAttribute="leading" secondItem="nK6-TD-FAf" secondAttribute="leading" constant="121" id="pmL-Qh-nFh"/>
+                            <constraint firstItem="jZ5-jg-pAz" firstAttribute="centerX" secondItem="yji-R4-2em" secondAttribute="centerX" id="u6G-0P-PWS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nK6-TD-FAf"/>
                     </view>
@@ -176,6 +175,7 @@
             </objects>
             <point key="canvasLocation" x="733.60000000000002" y="43.596059113300491"/>
         </scene>
+<<<<<<< HEAD
         <!--Login View Controller-->
         <scene sceneID="hPw-sd-T8Q">
             <objects>
@@ -188,7 +188,7 @@
                                 <rect key="frame" x="107" y="723" width="161" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="rYi-33-iyA"/>
-                                    <constraint firstAttribute="width" constant="161" id="uP0-YS-7zS"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="161" id="uP0-YS-7zS"/>
                                 </constraints>
                                 <state key="normal" title="Don't have an account?"/>
                                 <connections>
@@ -205,7 +205,7 @@
                                 <rect key="frame" x="32" y="359" width="311" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="AZG-aV-5xR"/>
-                                    <constraint firstAttribute="width" constant="311" id="F3v-PL-rkL"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="311" id="F3v-PL-rkL"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -214,7 +214,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cay-2O-jqS">
                                 <rect key="frame" x="32" y="406" width="311" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="311" id="Sot-mz-kma"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="311" id="Sot-mz-kma"/>
                                     <constraint firstAttribute="height" constant="30" id="yZY-LR-26M"/>
                                 </constraints>
                                 <nil key="textColor"/>
@@ -222,15 +222,18 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWC-8u-dlk">
-                                <rect key="frame" x="161.66666666666666" y="464" width="52" height="33"/>
+                                <rect key="frame" x="158.66666666666666" y="464" width="58" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="52" id="xC6-ci-IUn"/>
-                                    <constraint firstAttribute="height" constant="33" id="xsd-qU-6g6"/>
+                                    <constraint firstAttribute="height" constant="40" id="NxS-O0-uYW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="58" id="eqJ-Ss-E9M"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Sign In">
+                                <fontDescription key="fontDescription" name="SirinStencil-Regular" family="SirinStencil" pointSize="19"/>
+                                <state key="normal" title="SIGN IN">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="SignInTapped:" destination="rom-3O-X7t" eventType="touchUpInside" id="CYg-cS-Ia9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -270,7 +273,7 @@
                                 <rect key="frame" x="32" y="349" width="311" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="bcl-XR-A9q"/>
-                                    <constraint firstAttribute="width" constant="311" id="upv-O2-XD1"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="311" id="upv-O2-XD1"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -280,7 +283,7 @@
                                 <rect key="frame" x="32" y="396" width="311" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="DhV-LN-y2r"/>
-                                    <constraint firstAttribute="width" constant="311" id="dt4-kC-Ve5"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="311" id="dt4-kC-Ve5"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -289,15 +292,18 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFR-tQ-gUr">
                                 <rect key="frame" x="99.666666666666686" y="723" width="176" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="176" id="SMh-Cq-QJf"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="176" id="SMh-Cq-QJf"/>
                                     <constraint firstAttribute="height" constant="30" id="i8I-FG-0rb"/>
                                 </constraints>
                                 <state key="normal" title="Already have an account?"/>
+                                <connections>
+                                    <action selector="dismiss_onClick:" destination="Xg6-Ez-r9N" eventType="touchUpInside" id="9cZ-Gb-6Rx"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Get Started" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VaC-YV-1Gq">
                                 <rect key="frame" x="52" y="256" width="271" height="57"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="271" id="EbI-5Z-M5N"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="271" id="EbI-5Z-M5N"/>
                                     <constraint firstAttribute="height" constant="57" id="pc4-2n-gjD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SirinStencil-Regular" family="SirinStencil" pointSize="39"/>
@@ -307,7 +313,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fEB-LK-nQc">
                                 <rect key="frame" x="32" y="443" width="311" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="311" id="6IE-yp-oGH"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="311" id="6IE-yp-oGH"/>
                                     <constraint firstAttribute="height" constant="30" id="9E6-Db-Wnp"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="aRv-0s-9Us"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="311" id="toy-Zd-Dwn"/>
@@ -320,9 +326,9 @@
                                 <rect key="frame" x="32" y="490" width="311" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="6nY-KL-IEA"/>
-                                    <constraint firstAttribute="width" constant="311" id="9T8-Pg-hoQ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="311" id="9T8-Pg-hoQ"/>
                                     <constraint firstAttribute="height" constant="30" id="WuY-5o-YRh"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="311" id="gn9-na-xmO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="311" id="gn9-na-xmO"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="311" id="ohy-ld-Esg"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="uXT-eq-uOk"/>
                                 </constraints>
@@ -331,15 +337,18 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Jm-wW-aAc">
-                                <rect key="frame" x="157" y="548" width="61" height="33"/>
+                                <rect key="frame" x="154" y="548" width="67" height="33"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="61" id="ECa-fI-UDD"/>
-                                    <constraint firstAttribute="height" constant="33" id="b7Q-Qi-hZp"/>
+                                    <constraint firstAttribute="height" constant="33" id="GpS-e6-9uY"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="67" id="vAx-XX-iBn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Sign Up">
+                                <fontDescription key="fontDescription" name="SirinStencil-Regular" family="SirinStencil" pointSize="19"/>
+                                <state key="normal" title="SIGN UP">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="SignUpTapped:" destination="Xg6-Ez-r9N" eventType="touchUpInside" id="wMc-sb-EUK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -369,7 +378,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AyX-xO-opZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-642" y="744"/>
+            <point key="canvasLocation" x="-642.39999999999998" y="743.3497536945813"/>
         </scene>
+=======
+>>>>>>> parent of 4c52db8... Added Login & Register
     </scenes>
 </document>
